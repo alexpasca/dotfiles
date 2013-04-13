@@ -1,6 +1,11 @@
 #!/bin/bash
 
-DOTFILES_HOME=$(cd "`dirname $0`" && pwd)
+if test -n "${BASH_SOURCE}"; then
+  DOTFILES_HOME=$(cd "`dirname "${BASH_SOURCE}"`" && pwd)
+else 
+  DOTFILES_HOME=$(cd "`dirname $0`" && pwd)
+fi
+
 LINK_BKP_DIR=${DOTFILES_HOME}/.link.bkp
 
 function fail {
@@ -34,3 +39,4 @@ HERE
 
 link_file .vimrc .vim .bash_profile .zshrc
 
+# vim:ts=2:sw=2:et:
