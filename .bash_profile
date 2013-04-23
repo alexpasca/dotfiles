@@ -1,4 +1,8 @@
 
+if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi
+
 if test -f ~/.dotfilesrc; then
   . ~/.dotfilesrc
 fi
@@ -7,7 +11,14 @@ if command -V brew >/dev/null 2>&1; then
   if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
   fi
+  export PATH=/usr/local/bin:$PATH
 fi
+
+
+if test -d ~/bin; then
+  export PATH=~/bin:$PATH
+fi
+
 
 case "$OSTYPE" in
   solaris*) IS_SOLARIS=1 ;;
