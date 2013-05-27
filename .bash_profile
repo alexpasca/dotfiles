@@ -8,10 +8,11 @@ if test -f ~/.dotfilesrc; then
 fi
 
 if command -V brew >/dev/null 2>&1; then
-  if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
+  BREW_PREFIX=$(brew --prefix)
+  if [ -f ${BREW_PREFIX}/etc/bash_completion ]; then
+    . ${BREW_PREFIX}/etc/bash_completion
   fi
-  export PATH=/usr/local/bin:$PATH
+  export PATH=${BREW_PREFIX}/bin:${BREW_PREFIX}/sbin:$PATH
 fi
 
 
