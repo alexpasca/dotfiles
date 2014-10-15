@@ -1,4 +1,8 @@
 execute pathogen#infect()
+
+" load vim-sensible now to be able to override some settings
+runtime! plugin/sensible.vim
+
 syntax on
 filetype plugin indent on
 
@@ -18,7 +22,7 @@ set modeline
 set modelines=1
 
 " persistent undo dir
-" set undodir^=~/.vim/undo//
+" set undodir^=~/.vim/undo/
 set noundofile
 
 " NERD Tree shortcut

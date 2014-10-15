@@ -30,7 +30,7 @@ case "$OSTYPE" in
 esac
 
 if test "$IS_DARWIN" = "1" ; then
-  UNDODIR=~/Library/Vim/undo
+  export UNDODIR=~/Library/Vim/undo
   test -d $UNDODIR || mkdir -p $UNDODIR
 fi
 
