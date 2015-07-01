@@ -20,6 +20,9 @@ if test -d ~/bin; then
   export PATH=~/bin:$PATH
 fi
 
+if test -e /usr/bin/aws_completer; then
+  complete -C '/usr/bin/aws_completer' aws
+fi
 
 case "$OSTYPE" in
   solaris*) IS_SOLARIS=1 ;;
@@ -37,5 +40,6 @@ fi
 #test "`type -t __git_ps1`" = "function" && export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 test "`type -t __git_ps1`" = "function" && export PS1='\h:\W \u $(__git_ps1 "(%s)")\$ '
 
+export PATH=/home/alex/Qt5/5.4/gcc_64/bin/:/home/alex/Qt5/Tools/QtCreator/bin/:$PATH
 
 # vim:ts=2:sw=2:et:
