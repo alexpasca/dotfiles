@@ -33,14 +33,10 @@ function link_file {
   done
 }
 
-function link_bin {
-  # todo dome other time
-}
-
 cat <<HERE > ~/.dotfilesrc
 export DOTFILES_HOME=${DOTFILES_HOME}
 HERE
 
-link_file .vimrc .vim .bash_profile .zshrc
+link_file .vimrc .vim .bash_profile .zshrc .zprofile
 
 # vim:ts=2:sw=2:et:

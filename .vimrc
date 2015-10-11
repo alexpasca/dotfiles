@@ -7,12 +7,13 @@ syntax on
 filetype plugin indent on
 
 if has('gui_running')
-	set guifont=Monaco:h13
+	set guifont=Monaco\ for\ Powerline:h13
 	set background=light
 	colorscheme solarized
 else
 	set background=dark
-	colorscheme jellybeans
+	"colorscheme jellybeans
+	colorscheme solarized
 endif
 
 set number
@@ -20,6 +21,10 @@ set list
 set ruler
 set modeline
 set modelines=1
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 
 " persistent undo dir
 " set undodir^=~/.vim/undo/
