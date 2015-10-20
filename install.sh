@@ -37,6 +37,6 @@ cat <<HERE > ~/.dotfilesrc
 export DOTFILES_HOME=${DOTFILES_HOME}
 HERE
 
-link_file .vimrc .vim .bash_profile .zshrc .zprofile
+link_file .vimrc .vim .bash_profile .zshrc .zshenv
 
 # vim:ts=2:sw=2:et:

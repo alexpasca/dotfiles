@@ -22,7 +22,4 @@ if test "$IS_DARWIN" = "1" ; then
   test -d $UNDODIR || mkdir -p $UNDODIR
 fi
 
-#test "`type -t __git_ps1`" = "function" && export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
-#test "`type -t __git_ps1`" = "function" && export PS1='\h:\W \u $(__git_ps1 "(%s)")\$ '
-
 # vim:ts=2:sw=2:et:

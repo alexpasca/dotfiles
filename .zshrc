@@ -15,8 +15,9 @@ else
     return
 fi
 
+
+export POWERLINE_ROOT=$(pip show powerline-status | grep Location | awk -F": " '{print $2}')
 _powerline_setup() {
-	export POWERLINE_ROOT=$(pip show powerline-status | grep Location | awk -F": " '{print $2}')
 	if test -n "$POWERLINE_ROOT" -a -f "$POWERLINE_ROOT/powerline/bindings/zsh/powerline.zsh" ; then
 		if which powerline-daemon >& /dev/null; then powerline-daemon -q; fi
 		. "$POWERLINE_ROOT/powerline/bindings/zsh/powerline.zsh"
