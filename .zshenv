@@ -8,6 +8,9 @@ fi
 if test -d ~/bin; then
   export PATH=~/bin:$PATH
 fi
+if test -d ~/.cabal/bin; then
+  export PATH=~/.cabal/bin:$PATH
+fi
 
 case "$OSTYPE" in
   solaris*) IS_SOLARIS=1 ;;
