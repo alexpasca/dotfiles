@@ -14,8 +14,9 @@ if has('gui_running')
 	colorscheme solarized
 else
 	set background=dark
-	"colorscheme jellybeans
-	colorscheme solarized
+	"set background=light
+	colorscheme jellybeans
+	"colorscheme solarized
 endif
 
 set number
@@ -24,9 +25,9 @@ set ruler
 set modeline
 set modelines=1
 
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+" python from powerline.vim import setup as powerline_setup
+" python powerline_setup()
+" python del powerline_setup
 
 " persistent undo dir
 " set undodir^=~/.vim/undo/

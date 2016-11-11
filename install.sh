@@ -39,4 +39,6 @@ HERE
 
 link_file .vimrc .vim .bash_profile .zshrc .zshenv
 
+cd .dotfiles/.vim/bundle/vimproc.vim/ && make clean; make
+
 # vim:ts=2:sw=2:et:
